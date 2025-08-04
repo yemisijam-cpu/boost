@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umera Boost 4.0 Conference & Skill Acquisition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .slide-up {
+            animation: slideUp 1s ease-out;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #FACC15 0%, #000000 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-black text-white py-4 px-6 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mr-3">
+                    <span class="text-black font-bold text-xl">U</span>
+                </div>
+                <span class="font-bold text-xl">Umera Boost 4.0</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+                <a href="#about" class="hover:text-yellow-400 transition">About</a>
+                <a href="#details" class="hover:text-yellow-400 transition">Details</a>
+                <a href="#register" class="hover:text-yellow-400 transition">Register</a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-black w-full py-4 px-6 absolute left-0 top-full" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+                <a href="#about" class="hover:text-yellow-400 transition">About</a>
+                <a href="#details" class="hover:text-yellow-400 transition">Details</a>
+                <a href="#register" class="hover:text-yellow-400 transition">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent z-10"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-64 h-64 rounded-full bg-yellow-400 opacity-20 filter blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-6 py-24 md:py-32 relative z-20">
+            <div class="max-w-3xl fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 slide-up">
+                    <span class="gradient-text">Umera Boost 4.0</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-yellow-400 mb-6 slide-up">Conference & Skill Acquisition</h2>
+                <p class="text-lg text-gray-200 mb-8 slide-up">
+                    Join us for Umera Boost 4.0 — a powerful event designed to equip individuals with valuable knowledge and skills for personal and professional growth. The program features a dynamic conference and a hands-on skill acquisition stream.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 slide-up">
+                    <a href="#conference-register" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 text-center pulse">
+                        Register for Conference
+                    </a>
+                    <a href="#skill-register" class="bg-transparent hover:bg-black text-white font-bold py-3 px-8 border-2 border-yellow-400 rounded-full transition duration-300 transform hover:scale-105 text-center">
+                        Register for Skill Acquisition
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center z-0"></div>
+    </section>
+
+    <!-- Event Details Section -->
+    <section id="details" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">Event Details</h2>
+                <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Date Card -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center slide-up">
+                    <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-calendar-alt text-2xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Date</h3>
+                    <p class="text-gray-600">October 15-17, 2023</p>
+                </div>
+                
+                <!-- Time Card -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center slide-up">
+                    <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-2xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Time</h3>
+                    <p class="text-gray-600">9:00 AM - 5:00 PM Daily</p>
+                </div>
+                
+                <!-- Location Card -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center slide-up">
+                    <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-2xl text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Location</h3>
+                    <p class="text-gray-600">Grand Conference Center, Lagos & Online</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">About The Event</h2>
+                <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="slide-up">
+                    <h3 class="text-2xl font-bold mb-4 text-black">Conference Highlights</h3>
+                    <p class="text-gray-600 mb-6">
+                        Umera Boost 4.0 Conference brings together industry leaders, innovators, and change-makers to share insights on personal and professional development. Our carefully curated sessions will inspire and equip you with practical knowledge to excel in today's competitive landscape.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-yellow-400 mt-1 mr-2">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span class="text-gray-700">Keynote speeches from industry titans</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-yellow-400 mt-1 mr-2">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span class="text-gray-700">Panel discussions on emerging trends</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-yellow-400 mt-1 mr-2">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span class="text-gray-700">Networking opportunities with professionals</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-5 w-5 text-yellow-400 mt-1 mr-2">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <span class="text-gray-700">Interactive Q&A sessions</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="slide-up">
+                    <div class="bg-gray-100 rounded-xl p-6 border-l-4 border-yellow-400">
+                        <h3 class="text-2xl font-bold mb-4 text-black">Skill Acquisition Program</h3>
+                        <p class="text-gray-600 mb-6">
+                            Our hands-on skill acquisition program is designed to provide practical, marketable skills that can immediately impact your career or business. Choose from our specialized tracks:
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="skill-card bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                                <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mb-3">
+                                    <i class="fas fa-code text-black"></i>
+                                </div>
+                                <h4 class="font-semibold">Web Development</h4>
+                            </div>
+                            <div class="skill-card bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                                <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mb-3">
+                                    <i class="fas fa-chart-line text-black"></i>
+                                </div>
+                                <h4 class="font-semibold">Digital Marketing</h4>
+                            </div>
+                            <div class="skill-card bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                                <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mb-3">
+                                    <i class="fas fa-paint-brush text-black"></i>
+                                </div>
+                                <h4 class="font-semibold">Graphic Design</h4>
+                            </div>
+                            <div class="skill-card bg-yellow-50 p-4 rounded-lg border border-yellow-100">
+                                <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mb-3">
+                                    <i class="fas fa-video text-black"></i>
+                                </div>
+                                <h4 class="font-semibold">Video Editing</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">Featured Speakers</h2>
+                <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Speaker 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden slide-up">
+                    <div class="h-48 bg-gray-200 relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black opacity-30"></div>
+                        <div class="absolute bottom-4 left-4 w-16 h-16 bg-yellow-400 rounded-full border-4 border-white"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-1">Dr. Amina Yusuf</h3>
+                        <p class="text-yellow-600 mb-3">Leadership Expert</p>
+                        <p class="text-gray-600 text-sm">Author of "The Growth Mindset" and CEO of LeadRight Consulting</p>
+                    </div>
+                </div>
+                
+                <!-- Speaker 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden slide-up">
+                    <div class="h-48 bg-gray-200 relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black opacity-30"></div>
+                        <div class="absolute bottom-4 left-4 w-16 h-16 bg-yellow-400 rounded-full border-4 border-white"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-1">John Adebayo</h3>
+                        <p class="text-yellow-600 mb-3">Tech Entrepreneur</p>
+                        <p class="text-gray-600 text-sm">Founder of TechBuild Africa and digital transformation strategist</p>
+                    </div>
+                </div>
+                
+                <!-- Speaker 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden slide-up">
+                    <div class="h-48 bg-gray-200 relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black opacity-30"></div>
+                        <div class="absolute bottom-4 left-4 w-16 h-16 bg-yellow-400 rounded-full border-4 border-white"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-1">Chioma Eze</h3>
+                        <p class="text-yellow-600 mb-3">Financial Advisor</p>
+                        <p class="text-gray-600 text-sm">Personal finance coach and founder of MoneySmart Africa</p>
+                    </div>
+                </div>
+                
+                <!-- Speaker 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden slide-up">
+                    <div class="h-48 bg-gray-200 relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black opacity-30"></div>
+                        <div class="absolute bottom-4 left-4 w-16 h-16 bg-yellow-400 rounded-full border-4 border-white"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-1">Emeka Okoro</h3>
+                        <p class="text-yellow-600 mb-3">Brand Strategist</p>
+                        <p class="text-gray-600 text-sm">Creative director at BrandVille and marketing thought leader</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="py-16 bg-black text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Boost Your Future?</h2>
+                <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-gray-900 rounded-xl p-8 md:p-12 slide-up">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-400">Conference Registration</h3>
+                        <p class="text-gray-300 mb-6">
+                            Secure your spot at the premier personal and professional development conference of the year. Gain access to all keynote sessions, workshops, and networking opportunities.
+                        </p>
+                        <a id="conference-register" href="https://example.com/conference-register" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                            Register Now
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-400">Skill Acquisition</h3>
+                        <p class="text-gray-300 mb-6">
+                            Choose from our practical skill tracks and receive hands-on training from industry experts. Limited slots available for personalized attention.
+                        </p>
+                        <a id="skill-register" href="https://example.com/skill-register" class="inline-block bg-transparent hover:bg-gray-800 text-white font-bold py-3 px-8 border-2 border-yellow-400 rounded-full transition duration-300 transform hover:scale-105">
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-12 pt-8 border-t border-gray-800">
+                    <h3 class="text-xl font-bold mb-4 text-center">Have Questions?</h3>
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-phone text-black"></i>
+                            </div>
+                            <span>+234 812 345 6789</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-envelope text-black"></i>
+                            </div>
+                            <span>info@umeraboost.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mr-3">
+                                <i class="fab fa-whatsapp text-black"></i>
+                            </div>
+                            <span>+234 812 345 6789</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">What People Say</h2>
+                <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl slide-up">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-400 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Tunde Ojo</h4>
+                            <p class="text-yellow-600 text-sm">Umera Boost 3.0 Attendee</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "The skill acquisition program transformed my career. I went from zero knowledge to launching my own web design business within 6 months!"
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl slide-up">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-400 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Amina Mohammed</h4>
+                            <p class="text-yellow-600 text-sm">Conference Participant</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "The networking opportunities alone were worth the registration. I met potential clients and collaborators that have significantly grown my business."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl slide-up">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-400 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Emeka Nwankwo</h4>
+                            <p class="text-yellow-600 text-sm">Skill Acquisition Graduate</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "The practical approach to teaching digital marketing helped me immediately apply what I learned. My online sales increased by 200% after implementing the strategies."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="py-16 bg-yellow-400 text-black">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 fade-in">Event Starts In</h2>
+            
+            <div class="flex justify-center space-x-4 md:space-x-8 slide-up">
+                <div class="bg-black text-white p-4 rounded-lg w-20 md:w-24">
+                    <div class="text-3xl md:text-4xl font-bold" id="days">00</div>
+                    <div class="text-sm">Days</div>
+                </div>
+                <div class="bg-black text-white p-4 rounded-lg w-20 md:w-24">
+                    <div class="text-3xl md:text-4xl font-bold" id="hours">00</div>
+                    <div class="text-sm">Hours</div>
+                </div>
+                <div class="bg-black text-white p-4 rounded-lg w-20 md:w-24">
+                    <div class="text-3xl md:text-4xl font-bold" id="minutes">00</div>
+                    <div class="text-sm">Minutes</div>
+                </div>
+                <div class="bg-black text-white p-4 rounded-lg w-20 md:w-24">
+                    <div class="text-3xl md:text-4xl font-bold" id="seconds">00</div>
+                    <div class="text-sm">Seconds</div>
+                </div>
+            </div>
+            
+            <p class="mt-8 text-lg font-semibold slide-up">Don't miss this transformative experience!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-black font-bold">U</span>
+                        </div>
+                        <span class="font-bold text-xl">Umera Boost</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Empowering individuals with knowledge and skills for personal and professional excellence.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-400 transition">About</a></li>
+                        <li><a href="#details" class="text-gray-400 hover:text-yellow-400 transition">Event Details</a></li>
+                        <li><a href="#register" class="text-gray-400 hover:text-yellow-400 transition">Register</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mt-1 mr-2"></i>
+                            <span class="text-gray-400">123 Business Avenue, Lagos, Nigeria</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-yellow-400 mt-1 mr-2"></i>
+                            <span class="text-gray-400">+234 812 345 6789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-yellow-400 mt-1 mr-2"></i>
+                            <span class="text-gray-400">info@umeraboost.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to get updates about future events and opportunities.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 w-full">
+                        <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Umera Boost. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Countdown timer
+        function updateCountdown() {
+            const eventDate = new Date('October 15, 2023 09:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+            
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById('days').innerHTML = '00';
+                document.getElementById('hours').innerHTML = '00';
+                document.getElementById('minutes').innerHTML = '00';
+                document.getElementById('seconds').innerHTML = '00';
+            }
+        }
+        
+        updateCountdown();
+        const countdownTimer = setInterval(updateCountdown, 1000);
+        
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.slide-up').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
